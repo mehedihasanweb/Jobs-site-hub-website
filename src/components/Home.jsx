@@ -9,7 +9,7 @@ const Home = () => {
     const [featuresItems, setFeaturesItems] = useState([])
     
     const featuresData = useLoaderData();
-    console.log(featuresData);
+    // console.log(featuresData);
 
     useEffect(() => {
         fetch("category.json")
@@ -50,13 +50,18 @@ const Home = () => {
             </div>
 
             {/* features section */}
-            {/* <div>
+            <div className='mx-28 py-12'>
                 <h2 className='text-5xl font-bold text-center'>Features Jobs</h2>
                 <p className='text-gray-500 text-center'>Explore thousands of job opportunities with all the information you need. Its your future.</p>
-                <div className='grid '>
-
+                <div className='grid grid-cols-2 gap-4'>
+                    {
+                        featuresData.map(fData => <Features 
+                            key={fData.id}
+                            fData={fData}
+                            ></Features>)
+                    }
                 </div>
-            </div> */}
+            </div>
         </div>
     );
 };
