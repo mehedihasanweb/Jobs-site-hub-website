@@ -1,0 +1,80 @@
+[
+    {
+        "id": 1,
+        "image": "../public/assets/All Images/google-1-1 1.png",
+        "title" : "Technical Database Engineer",
+        "name" : "Google LLC",
+        "jobType": "remote",
+        "location": "Dhaka, Bangladesh",
+        "salary" : "100K - 150K",
+        "jobDescription": "Monitoring databases and related systems to ensure optimized performance. Writing new support programs and scripts to increase data storage capacity. Reviewing database and user reports, as well as system information. Performing debugging procedures on database scripts and programs, as well as resolving conflicts.",
+        "jobResponsibility": "Administer and maintain database security, integrity, and optimization. Develop and run periodic and requested reports Develop new databases and applications Identify and resolve performance and capacity issues Establish and maintain backup and recovery processes Maintain associated non-referential dataManage user rights and permissions",
+        "experience": "2-3 years in this field",
+        "email": "info@gmail.com"   
+    },
+    {
+        "id": 2,
+        "image": "../public/assets/All Images/netflix-4 1.png", 
+        "title" : "Senior Product Designer",
+        "name" : "Netflix",
+        "jobType": "Full Time",
+        "location": "Dhaka, Bangladesh",
+        "salary" : "100K - 150K",
+        "jobDescription": "Product Designer responsibilities include defining product specifications, creating digital or print drawings and designing fully-functional products.",
+        "jobResponsibility": "Product Designers are responsible for coming up with new product designs that meet the needs and wants of consumers. They will have many duties, such as creating design concepts, drawing ideas to determine which one is best suited for the product, and communicating their plans effectively so engineers can execute them.",
+        "experience":"1-2 years in this field",
+        "email":"info@gmail.com"
+    },
+    {
+        "id": 3,
+        "image": "../public/assets/All Images/tesla-9 1.png",
+        "title" : "Software Engineer",
+        "name" : "Tesla",
+        "jobType": "remote",
+        "location": "Dhaka, Bangladesh",
+        "salary" : "100K - 150K",
+        "jobDescription": "A Software Engineer is an IT professional who designs, develops and maintains computer software at a company. They use their creativity and technical skills and apply the principles of software engineering to help solve new and ongoing problems for an organization.",
+        "jobResponsibility": "Execute full software development life cycle (SDLC) Develop flowcharts, layouts and documentation to identify requirements and solutions Write well-designed, testable code Produce specifications and determine operational feasibility Integrate software components into a fully functional software system Develop software verification plans and quality assurance procedures",
+        "experience":"1 years in this field",
+        "email":"info@gmail.com"
+    },
+    {
+        "id": 4,
+        "image": "../public/assets/All Images/google-1-1 1.png",
+        "title" : "Software Engineer",
+        "name" : "Google LLC",
+        "jobType": "remote",
+        "location": "Dhaka, Bangladesh",
+        "salary" : "100K - 150K",
+        "jobDescription": "A Software Engineer is an IT professional who designs, develops and maintains computer software at a company. They use their creativity and technical skills and apply the principles of software engineering to help solve new and ongoing problems for an organization.",
+        "jobResponsibility": "Execute full software development life cycle (SDLC) Develop flowcharts, layouts and documentation to identify requirements and solutions Write well-designed, testable code Produce specifications and determine operational feasibility Integrate software components into a fully functional software system Develop software verification plans and quality assurance procedures",
+        "experience":"1 years in this field",
+        "email":"info@gmail.com"
+    },
+    {
+        "id": 5,
+        "image": "../public/assets/All Images/CareerHub.png",
+        "title" : "Senior Software Engineer",
+        "name" : "Career Hub",
+        "jobType": "Full Time",
+        "location": "Dhaka, Bangladesh",
+        "salary" : "80K - 100K",
+        "jobDescription": "A Software Engineer is an IT professional who designs, develops and maintains computer software at a company. They use their creativity and technical skills and apply the principles of software engineering to help solve new and ongoing problems for an organization.",
+        "jobResponsibility": "Execute full software development life cycle (SDLC) Develop flowcharts, layouts and documentation to identify requirements and solutions Write well-designed, testable code Produce specifications and determine operational feasibility Integrate software components into a fully functional software system Develop software verification plans and quality assurance procedures",
+        "experience":"1 years in this field",
+        "email":"info@gmail.com"
+    },
+    {
+        "id": 6,
+        "image": "../public/assets/All Images/Group 10021.png",
+        "title" : "Senior Product Designer",
+        "name" : "Air Bnb",
+        "jobType": "Full Time",
+        "location": "Dhaka, Bangladesh",
+        "salary" : "90K - 100K",
+        "jobDescription": "Product Designer responsibilities include defining product specifications, creating digital or print drawings and designing fully-functional products.",
+        "jobResponsibility": "Product Designers are responsible for coming up with new product designs that meet the needs and wants of consumers. They will have many duties, such as creating design concepts, drawing ideas to determine which one is best suited for the product, and communicating their plans effectively so engineers can execute them.",
+        "experience":"1-2 years in this field",
+        "email":"info@gmail.com"
+    }
+]

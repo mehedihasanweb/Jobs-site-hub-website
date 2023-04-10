@@ -1,0 +1,22 @@
+[
+    {
+        "image":"../public/assets/Icons/accounts 1.png",
+        "title": "account & Finance",
+        "totalJobs": "300 jobs Available"
+    },
+    {
+        "image":"../public/assets/Icons/business 1.png",
+        "title": "Creative Design",
+        "totalJobs": "100+ jobs Available"
+    },
+    {
+        "image":"../public/assets/Icons/social-media 1.png",
+        "title": "Marketing & Sales",
+        "totalJobs": "150 jobs Available"
+    },
+    {
+        "image":"../public/assets/Icons/chip 1.png",
+        "title": "Engineering Job",
+        "totalJobs": "224 jobs Available"
+    }
+]
