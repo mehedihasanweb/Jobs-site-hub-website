@@ -2,14 +2,15 @@ import React, { useEffect, useState } from 'react';
 import Category from './Category';
 import Features from './Features';
 import { useLoaderData } from 'react-router-dom';
+import JobDetail from './JobDetail';
 
 
 const Home = () => {
     const [catItems, setCatItems] = useState([]);
-    const [featuresItems, setFeaturesItems] = useState([])
-    
+    // const [featuresItems, setFeaturesItems] = useState(false)
+
     const featuresData = useLoaderData();
-    // console.log(featuresData);
+   
 
     useEffect(() => {
         fetch("category.json")
@@ -17,7 +18,7 @@ const Home = () => {
             .then(data => setCatItems(data))
     }, [])
     // console.log(catItems);
-    
+
     return (
         <div>
             {/* banner section */}
@@ -33,7 +34,7 @@ const Home = () => {
                         <button className='primary-btn mt-6'>Get Started</button>
                     </div>
                     <div>
-                        <img src="../../public/assets/All Images/P3OLGJ1 copy 1.png" alt="" />
+                        <img src="assets/All Images/P3OLGJ1 copy 1.png" alt="" />
                     </div>
                 </div>
             </div>
@@ -44,7 +45,9 @@ const Home = () => {
                 <p className='text-gray-500 text-center'>Explore thousands of job opportunities with all the information you need. Its your future.</p>
                 <div className='flex flex-col sm:justify-center py-12 md:flex-row gap-4'>
                     {
-                        catItems.map(catItem => <Category catItem={catItem}></Category>)
+                        catItems.map((catItem, idx) => <Category 
+                            key={idx}
+                            catItem={catItem}></Category>)
                     }
                 </div>
             </div>
@@ -54,12 +57,18 @@ const Home = () => {
                 <h2 className='text-5xl font-bold text-center'>Features Jobs</h2>
                 <p className='text-gray-500 text-center'>Explore thousands of job opportunities with all the information you need. Its your future.</p>
                 <div className='grid grid-cols-2 gap-4'>
+                    {/* console.log(featuresItems); */}
                     {
-                        featuresData.map(fData => <Features 
+                        
+                        featuresData.map(fData => <Features
                             key={fData.id}
                             fData={fData}
-                            ></Features>)
+                            // showJobDetails={showJobDetails}
+                        ></Features>)
                     }
+                </div>
+                <div onClick={() => setFeaturesItems(true)} className='text-center mt-6'>
+                    <button className='primary-btn'>Show More</button>
                 </div>
             </div>
         </div>

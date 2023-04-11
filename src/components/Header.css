@@ -1,6 +1,6 @@
 .background {
-   /* background-color: linear-gradient(90deg, rgba(126, 144, 254, 0.05) 0%, rgba(152, 115, 255, 0.05) 100%); */
-   background-color: rgb(243, 240, 240);
+   background-color: linear-gradient(90deg, rgba(126, 144, 254, 0.05) 0%, rgba(152, 115, 255, 0.05) 100%);
+   /* backgr?ound-color: rgb(243, 240, 240); */
 }
 .primary-color{
    color: #7E90FE;
@@ -15,8 +15,9 @@
 }
 
 .primary{
-   background: linear-gradient(90deg, #7E90FE 0%, #9873FF 100%);
-   border-radius: 10px;
+   color: #7E90FE;
+   /* background-color: linear-gradient(90deg, #7E90FE 0%, #9873FF 100%); */
+   /* border-radius: 10px;
    text-align: center;
-   padding: 5px;
+   padding: 5px; */
 }

@@ -3,7 +3,7 @@ import { MapPinIcon, CurrencyDollarIcon } from '@heroicons/react/24/solid'
 import { Link } from 'react-router-dom';
 
 const Features = ({ fData }) => {
-    console.log(fData)
+    // console.log(fData)
     const { image, id, employmentType, jobType, salary, location, name, title } = fData
     return (
         <div className='border mt-8'>
@@ -21,7 +21,8 @@ const Features = ({ fData }) => {
                     <CurrencyDollarIcon className='w-6 h-6' />
                     <p>{salary}</p>
                 </div>
-                <Link><button className='primary-btn'>View Details</button></Link>
+                <button className='primary-btn'><Link to={`/${id}`}>View Details</Link></button>
+                
             </div>
         </div>
     );
