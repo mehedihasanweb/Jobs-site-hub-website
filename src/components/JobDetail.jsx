@@ -5,17 +5,17 @@ import { MapPinIcon, CurrencyDollarIcon, CreditCardIcon, PhoneIcon, EnvelopeIcon
 import Jobs from './Jobs';
 
 const JobDetail = () => {
-    const [jobs, setJobs] = useState([])
-
     const getData = useLoaderData();
-    // console.log(getData);
+
+    console.log(getData);
     const { id, jobDescription, jobResponsibility, salary, title, experience, email, phone, education, location } = getData
 
+    
     const handleTotalJobs =(getData)=>{
-        // <Jobs getData={getData}></Jobs>
-        setJobs(getData);
+    //    console.log(getData);
+       <Jobs a = {getData}></Jobs>
     }
-    // console.log(jobs);
+    
 
 
 
@@ -59,7 +59,7 @@ const JobDetail = () => {
                     <button onClick={()=>handleTotalJobs(getData)} className='primary-btn w-full'>Apply Now</button>
                 </div>
             </div>
-            <Jobs jobs={jobs}></Jobs>
+            {/* <Jobs jobs={}></Jobs> */}
         </div>
     );
 };
