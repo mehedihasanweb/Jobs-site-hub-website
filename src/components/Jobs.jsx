@@ -29,7 +29,7 @@ const Jobs = () => {
             setOnsite(aa);
         }
     }
-    console.log(onsite);
+    // console.log(onsite);
 
     const handleFullTime =(jobsInfo) =>{
         setIsAll(true)
