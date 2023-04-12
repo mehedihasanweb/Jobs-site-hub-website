@@ -29,9 +29,15 @@ const Jobs = () => {
             setOnsite(aa);
         }
     }
-    // console.log(onsite);
+    console.log(onsite);
 
-    
+    const handleFullTime =(jobsInfo) =>{
+        setIsAll(true)
+        const aa = jobsInfo.filter(job => job.employmentType == "Full Time")
+        if(aa){
+            setOnsite(aa);
+        }
+    }
 
 
     return (
@@ -53,7 +59,6 @@ const Jobs = () => {
                             key={jobData.id}
                             jobData={jobData}></ApplyPart>)}
                 </div>
-
             </div>
         </div>
     );
