@@ -14,6 +14,7 @@ import Jobs from './components/Jobs';
 import Blogs from './components/Blogs';
 import Home from './components/Home';
 import JobDetail from './components/JobDetail';
+import ErrorPage from './components/ErrorPage';
 
 const router = createBrowserRouter([
   {
