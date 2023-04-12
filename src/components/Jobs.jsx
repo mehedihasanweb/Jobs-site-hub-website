@@ -8,7 +8,7 @@ const Jobs = () => {
     const [onsite, setOnsite] = useState([])
     
     const fData = useLoaderData();
-    // console.log(fData);
+    
 
     let jobsInfo = []
     const jobsData = getShoppingCart();
@@ -19,17 +19,17 @@ const Jobs = () => {
             jobsInfo.push(jobs)
         }
     }
-    // console.log(jobsInfo);
+    
     
     const handleOnsite =(jobsInfo) =>{
-        // console.log(jobsInfo);
+        
         setIsAll(true)
         const aa = jobsInfo.filter(job => job.jobType == "Onsite")
         if(aa){
             setOnsite(aa);
         }
     }
-    // console.log(onsite);
+    
 
     const handleFullTime =(jobsInfo) =>{
         setIsAll(true)

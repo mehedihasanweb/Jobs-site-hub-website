@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const ApplyPart = ({ jobData }) => {
-    // console.log(jobData);
+    
     const {id, image, jobType, location, employmentType, name, salary, title, } = jobData
     return (
         <div className='mx-auto border-4 rounded-lg p-3 mt-16 w-[60%]'>

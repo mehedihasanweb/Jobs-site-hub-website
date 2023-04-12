@@ -57,6 +57,6 @@ const Statistics = () => {
         </ComposedChart>
     );
   }
-// };
+
 
 export default Statistics;

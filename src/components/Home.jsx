@@ -7,21 +7,18 @@ import JobDetail from './JobDetail';
 
 const Home = () => {
     const [catItems, setCatItems] = useState([]);
-    // const [featuresItems, setFeaturesItems] = useState(true)
+    
     const [all, setAll] = useState(false)
     const featuresData = useLoaderData();
 
-    // const handleShowAll = () => {
-    //     setAll(false)
-    // }
-
+    
 
     useEffect(() => {
         fetch("category.json")
             .then(res => res.json())
             .then(data => setCatItems(data))
     }, [])
-    // console.log(catItems);
+    
 
     return (
         <div>
