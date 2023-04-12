@@ -7,10 +7,14 @@ import JobDetail from './JobDetail';
 
 const Home = () => {
     const [catItems, setCatItems] = useState([]);
-    // const [featuresItems, setFeaturesItems] = useState(false)
-
+    // const [featuresItems, setFeaturesItems] = useState(true)
+    const [all, setAll] = useState(false)
     const featuresData = useLoaderData();
-   
+
+    // const handleShowAll = () => {
+    //     setAll(false)
+    // }
+
 
     useEffect(() => {
         fetch("category.json")
@@ -45,7 +49,7 @@ const Home = () => {
                 <p className='text-gray-500 text-center'>Explore thousands of job opportunities with all the information you need. Its your future.</p>
                 <div className='flex flex-col sm:justify-center py-12 md:flex-row gap-4'>
                     {
-                        catItems.map((catItem, idx) => <Category 
+                        catItems.map((catItem, idx) => <Category
                             key={idx}
                             catItem={catItem}></Category>)
                     }
@@ -59,17 +63,19 @@ const Home = () => {
                 <div className='grid grid-cols-2 gap-4'>
                     {/* console.log(featuresItems); */}
                     {
-                        
-                        featuresData.map(fData => <Features
+
+                        featuresData.slice(0, all ? 6 : 4).map(fData => <Features
                             key={fData.id}
                             fData={fData}
-                            // showJobDetails={showJobDetails}
+                        // showJobDetails={showJobDetails}
                         ></Features>)
                     }
                 </div>
-                <div onClick={() => setFeaturesItems(true)} className='text-center mt-6'>
-                    <button className='primary-btn'>Show More</button>
-                </div>
+                {!all && (
+                    <span onClick={()=>setAll(true)} >
+                        <button className='primary-btn flex mx-auto mt-4'>See More</button>
+                    </span>
+                )}
             </div>
         </div>
     );
