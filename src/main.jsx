@@ -15,6 +15,7 @@ import Blogs from './components/Blogs';
 import Home from './components/Home';
 import JobDetail from './components/JobDetail';
 import ErrorPage from './components/ErrorPage';
+import Onsite from './components/Onsite';
 
 const router = createBrowserRouter([
   {
@@ -48,6 +49,11 @@ const router = createBrowserRouter([
       {
         path: 'blogs',
         element: <Blogs/>
+      },
+      {
+        path:'onsite',
+        element: <Onsite />,
+        loader: ()=>fetch('data.json')
       }
     ]
   }

@@ -1,23 +1,39 @@
-import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useLoaderData } from 'react-router-dom';
 import { getShoppingCart } from '../../public/fakedb';
 import ApplyPart from './ApplyPart';
 
 const Jobs = () => {
+    const [isAll, setIsAll] = useState(false)
+    const [onsite, setOnsite] = useState([])
+    
     const fData = useLoaderData();
     // console.log(fData);
 
     let jobsInfo = []
     const jobsData = getShoppingCart();
-    // console.log(jobsData);
+    
     for (const id in jobsData) {
-        // console.log(id);
         const jobs = fData.find(job => job.id == id);
         if (jobs) {
             jobsInfo.push(jobs)
         }
     }
     // console.log(jobsInfo);
+    
+    const handleOnsite =(jobsInfo) =>{
+        // console.log(jobsInfo);
+        setIsAll(true)
+        const aa = jobsInfo.filter(job => job.jobType == "Onsite")
+        if(aa){
+            setOnsite(aa);
+        }
+    }
+    // console.log(onsite);
+
+    
+
+
     return (
         <div>
 
@@ -27,11 +43,15 @@ const Jobs = () => {
                         <h2 className='details-page text-center text-4xl font-bold pt-16'>Job Details</h2>
                     </div>
                     <div className='mr-60 text-end'>
-                        <h2 className='text-2xl'>Filter</h2>
+                        <button onClick={()=>handleOnsite(jobsInfo)} className='primary-btn'>Onsite</button>
+                        <button onClick={()=>handleFullTime(jobsInfo)} className='primary-btn mx-4'>Fulltime</button>
                     </div>
-                    {jobsInfo.map(jobData => <ApplyPart
+                    {!isAll ? jobsInfo.map(jobData => <ApplyPart
                         key={jobData.id}
-                        jobData={jobData}></ApplyPart>)}
+                        jobData={jobData}></ApplyPart>)
+                        : onsite.map(jobData => <ApplyPart
+                            key={jobData.id}
+                            jobData={jobData}></ApplyPart>)}
                 </div>
 
             </div>
