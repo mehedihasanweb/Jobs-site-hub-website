@@ -1,13 +1,13 @@
 .details-page {
     background-color: linear-gradient(90deg, rgba(126, 144, 254, 0.05) 0%, rgba(152, 115, 255, 0.05) 100%);
-    background-image: url("../../public/assets/All\ Images/Vector.png");
+    background-image: url("/assets/All\ Images/Vector.png");
     background-repeat: no-repeat;
     position: relative;
     height: 200px;
 }
 
 .details-bg {
-    background-image: url("../../public//assets/All\ Images/Vector-1.png");
+    background-image: url("/assets/All\ Images/Vector-1.png");
     background-repeat: no-repeat;
     background-position: right;
 }
