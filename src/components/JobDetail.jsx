@@ -1,22 +1,25 @@
-import React, { useState } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 import "./JobDetail.css"
 import { Link, useLoaderData } from 'react-router-dom';
 import { MapPinIcon, CurrencyDollarIcon, CreditCardIcon, PhoneIcon, EnvelopeIcon } from '@heroicons/react/24/solid'
 import Jobs from './Jobs';
+import { addToDb, getShoppingCart } from '../../public/fakedb';
 
 const JobDetail = () => {
     const getData = useLoaderData();
-
-    console.log(getData);
+    // const [products, setProducts] = useState([])
+    // const [cart, setCart] = useState([])
+    // // console.log(getData);
     const { id, jobDescription, jobResponsibility, salary, title, experience, email, phone, education, location } = getData
 
-    
-    const handleTotalJobs =(getData)=>{
-    //    console.log(getData);
-       <Jobs a = {getData}></Jobs>
-    }
-    
 
+
+
+    const handleTotalJobs = (product) => {
+        
+        addToDb(product.id)
+
+    }
 
 
     return (
@@ -36,16 +39,16 @@ const JobDetail = () => {
                     <hr />
                     <div className='flex items-center p-2'>
                         <CurrencyDollarIcon className='w-6 h-6 text-gray-800' />
-                        <h2 className='text-xl font-semibold p-2'>Salary: <span className='text-gray-500'>{salary} (Per Month)</span></h2>    
+                        <h2 className='text-xl font-semibold p-2'>Salary: <span className='text-gray-500'>{salary} (Per Month)</span></h2>
                     </div>
                     <div className='flex items-center p-2'>
                         <CreditCardIcon className='w-6 h-6 text-gray-800'></CreditCardIcon>
                         <h2 className='text-xl font-semibold p-2'>Job title: <span className='text-gray-500'>{title}</span></h2>
                     </div>
-                        <h2 className='text-2xl font-semibold'>Contact Information</h2>
-                        <hr className='m-2'/>
+                    <h2 className='text-2xl font-semibold'>Contact Information</h2>
+                    <hr className='m-2' />
                     <div className='flex items-center'>
-                        <PhoneIcon  className='w-6 h-6 text-gray-800'/>
+                        <PhoneIcon className='w-6 h-6 text-gray-800' />
                         <h2 className='text-xl font-semibold p-2'>Phone: <span className='text-gray-500'>{phone}</span></h2>
                     </div>
                     <div className='flex items-center'>
@@ -53,13 +56,14 @@ const JobDetail = () => {
                         <h2 className='text-xl font-semibold p-2'>Email: <span className='text-gray-500'>{email}</span></h2>
                     </div>
                     <div className='flex items-center'>
-                        <MapPinIcon className="w-6 h-6 text-gray-700"></MapPinIcon>          
+                        <MapPinIcon className="w-6 h-6 text-gray-700"></MapPinIcon>
                         <h2 className='text-xl font-semibold p-2'>Address: <span className='text-gray-500'>{location}</span></h2>
                     </div>
-                    <button onClick={()=>handleTotalJobs(getData)} className='primary-btn w-full'>Apply Now</button>
+                    <button onClick={() => handleTotalJobs(getData)} className='primary-btn w-full'>Apply Now</button>
                 </div>
             </div>
-            {/* <Jobs jobs={}></Jobs> */}
+            {/* {cart ===  true && <Jobs cart={cart}></Jobs>} */}
+            {/* <Jobs cart={cart}></Jobs> */}
         </div>
     );
 };
